@@ -1,0 +1,41 @@
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Bundle 'gmarik/Vundle.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'L9'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'chrisbra/Colorizer'
+Bundle 'abhilb/puttum-kadalayum'
+
+call vundle#end()
+
+filetype plugin indent on
+
+let g:airline#extensions#tabline#enabled = 1
+
+map <C-n> :NERDTreeToggle<CR>
+set laststatus=2
+
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set number
+set cursorline
+
+command! -nargs=* Wrap set wrap linebreak nolist
+
+syntax on
+
+let mapleader=","
+
+"my mappings
+nnoremap <silent> <leader>ev :vsplit $MYVIMRC <CR>
+nnoremap <silent> <leader>so :source $MYVIMRC <CR>
+
+
+
