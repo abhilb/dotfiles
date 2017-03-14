@@ -13,6 +13,7 @@ Bundle 'chrisbra/Colorizer'
 Bundle 'abhilb/puttum-kadalayum'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-eunuch'
 
 call vundle#end()
 
@@ -39,5 +40,7 @@ let mapleader=","
 nnoremap <silent> <leader>ev :vsplit $MYVIMRC <CR>
 nnoremap <silent> <leader>so :source $MYVIMRC <CR>
 
+highlight todomsg ctermbg=red guibg=red ctermfg=yellow guifg=yellow term=bold
+match todomsg /@todo/
 
 
