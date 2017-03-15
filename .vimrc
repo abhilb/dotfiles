@@ -10,11 +10,12 @@ Bundle 'L9'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'chrisbra/Colorizer'
-Bundle 'abhilb/puttum-kadalayum'
+"Bundle 'abhilb/puttum-kadalayum'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tmhedberg/SimpylFold'
+Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
