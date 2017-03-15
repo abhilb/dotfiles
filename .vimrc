@@ -31,6 +31,16 @@ set softtabstop=4
 set number
 set cursorline
 
+
+"Python settings {{1
+au BufNewFile,BufRead *.py
+    \set tabstop=4       |
+    \set softtabstop=4   |
+    \set shiftwidth=4    |
+    \set expandtab       |
+    \set autoindent      |
+    \set fileformat=unix |
+
 command! -nargs=* Wrap set wrap linebreak nolist
 
 syntax on
