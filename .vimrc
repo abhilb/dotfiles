@@ -14,6 +14,7 @@ Bundle 'abhilb/puttum-kadalayum'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-eunuch'
+Bundle 'tmhedberg/SimpylFold'
 
 call vundle#end()
 
