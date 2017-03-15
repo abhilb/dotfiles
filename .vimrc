@@ -1,5 +1,9 @@
 filetype off
 
+set showcmd
+
+
+"Vundle {{{
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -18,6 +22,19 @@ Bundle 'tmhedberg/SimpylFold'
 Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()
+"}}}
+
+"Folding {{{
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=marker
+set foldlevel=0
+set modelines=1
+nnoremap <space> za
+"}}}
+
+
 
 filetype plugin indent on
 
@@ -33,7 +50,7 @@ set number
 set cursorline
 
 
-"Python settings {{1
+"Python settings {{{
 au BufNewFile,BufRead *.py
     \set tabstop=4       |
     \set softtabstop=4   |
@@ -41,6 +58,7 @@ au BufNewFile,BufRead *.py
     \set expandtab       |
     \set autoindent      |
     \set fileformat=unix |
+"}}}
 
 command! -nargs=* Wrap set wrap linebreak nolist
 
