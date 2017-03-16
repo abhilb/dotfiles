@@ -4,18 +4,21 @@ filetype off
 set nocompatible "disable vi compatibility
 set autowrite    "writes on make/shell commands
 set clipboard+=unnamed "yanks go on clipboard
+"}}}
 
+"Searching {{{
 set hlsearch
 set incsearch
+
+nnoremap noh :nohlsearch<CR>
 "}}}
 
 "Formatting {{{
+set wildmenu
 
 " nicked from gmarik's vimrc
 set wildmode=longest,list "At command line complete longest common string, then list alternatives.
 
-" again nicked from gmarik's vimrc
-set backspace=indent, eol, start
 
 set showcmd
 
@@ -47,6 +50,7 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'Valloric/YouCompleteMe'
 
+Bundle 'https://github.com/kien/ctrlp.vim'
 call vundle#end()
 "}}}
 
@@ -60,7 +64,15 @@ set modelines=1
 nnoremap <space> za
 "}}}
 
-
+"CtrlP settings {{{
+"search top to bottom
+let g:ctrlp_match_window='bottom,order=ttb'
+"open file in a new buffer
+let g:ctrlp_switch_buffer=0
+"change default mapping
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+"}}}
 
 filetype plugin indent on
 
