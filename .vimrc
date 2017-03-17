@@ -50,7 +50,11 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'Valloric/YouCompleteMe'
 
+Bundle 'abhilb/parunthu'
+
 Bundle 'https://github.com/kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
+
 call vundle#end()
 "}}}
 
@@ -99,6 +103,7 @@ let mapleader=","
 "my mappings
 nnoremap <silent> <leader>ev :vsplit $MYVIMRC <CR>
 nnoremap <silent> <leader>so :source $MYVIMRC <CR>
+    nmap <F8> :TagbarToggle <CR>
 
 "Misc {{{
 highlight todomsg ctermbg=red guibg=red ctermfg=yellow guifg=yellow term=bold
