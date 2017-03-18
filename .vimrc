@@ -36,6 +36,7 @@ filetype plugin indent on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Bundle 'ervandew/supertab'
 Bundle 'gmarik/Vundle.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
@@ -48,7 +49,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tmhedberg/SimpylFold'
-Bundle 'Valloric/YouCompleteMe'
 
 
 Bundle 'https://github.com/kien/ctrlp.vim'
@@ -107,6 +107,7 @@ nnoremap <silent> <leader>so :source $MYVIMRC <CR>
 "Misc {{{
 highlight todomsg ctermbg=red guibg=red ctermfg=yellow guifg=yellow term=bold
 match todomsg /@todo/
+
 "}}}
 
 source $VIM/abbreviations.vim
