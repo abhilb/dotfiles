@@ -50,7 +50,6 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'Valloric/YouCompleteMe'
 
-Bundle 'abhilb/parunthu'
 
 Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
@@ -109,4 +108,7 @@ nnoremap <silent> <leader>so :source $MYVIMRC <CR>
 highlight todomsg ctermbg=red guibg=red ctermfg=yellow guifg=yellow term=bold
 match todomsg /@todo/
 "}}}
+
+source $VIM/abbreviations.vim
+
 
