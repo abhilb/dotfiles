@@ -50,9 +50,11 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tmhedberg/SimpylFold'
 
+Bundle 'tpope/vim-rails'
 
 Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'sjl/gundo.vim'
 
 call vundle#end()
 "}}}
@@ -99,10 +101,13 @@ command! -nargs=* Wrap set wrap linebreak nolist
 
 let mapleader=","
 
-"my mappings
+"MyMappings {{{
 nnoremap <silent> <leader>ev :vsplit $MYVIMRC <CR>
 nnoremap <silent> <leader>so :source $MYVIMRC <CR>
-    nmap <F8> :TagbarToggle <CR>
+nnoremap <F5> :GundoToggle <CR>
+nmap <F8> :TagbarToggle <CR>
+"}}}
+
 
 "Misc {{{
 highlight todomsg ctermbg=red guibg=red ctermfg=yellow guifg=yellow term=bold
