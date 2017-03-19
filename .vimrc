@@ -110,6 +110,8 @@ noremap <F3> :set invnumber<CR>
 inoremap <F3> <C-O>:set invnumber<CR>
 nnoremap <leader>1 :bprev <CR>
 nnoremap <leader>2 :bnext <CR>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
 "}}}
 
 
