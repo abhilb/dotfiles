@@ -112,6 +112,8 @@ nnoremap <leader>1 :bprev <CR>
 nnoremap <leader>2 :bnext <CR>
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
+nnoremap xx zM
+nnoremap oo zR
 "}}}
 
 
