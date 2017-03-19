@@ -105,7 +105,7 @@ nnoremap <silent> <leader>ev :vsplit $MYVIMRC <CR>
 nnoremap <silent> <leader>so :source $MYVIMRC <CR>
 nnoremap <F5> :GundoToggle <CR>
 nmap <F8> :TagbarToggle <CR>
-nnoremap <silent> <leader>tcc call ToggleColumnCursor() <CR>
+nnoremap <leader>tcc :call ToggleColumnCursor() <CR>
 noremap <F3> :set invnumber<CR>
 inoremap <F3> <C-O>:set invnumber<CR>
 nnoremap <leader>1 :bprev <CR>
@@ -118,8 +118,8 @@ highlight todomsg ctermbg=red guibg=red ctermfg=yellow guifg=yellow term=bold
 match todomsg /@todo/
 
 function! ToggleColumnCursor()
-    echom g:columncursorflag
-    if exists(g:columncursorflag)
+    if exists("g:columncursorflag")
+        echom g:columncursorflag
         unlet g:columncursorflag
         set nocursorcolumn
     else
