@@ -108,4 +108,4 @@ match todomsg /@todo/
 source $VIM/abbreviations.vim
 source $VIM/mappings.vim
 
-
+au BufNewFile,BufRead *.hdev set filetype=hdev
