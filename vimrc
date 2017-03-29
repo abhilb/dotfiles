@@ -28,7 +28,7 @@ set number
 set cursorline
 
 syntax on
-filetype plugin indent on
+filetype off
 "}}}
 
 "Vundle {{{
@@ -50,13 +50,16 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tmhedberg/SimpylFold'
 
 Bundle 'tpope/vim-rails'
-
+Bundle 'abhilb/parunthu'
 Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'sjl/gundo.vim'
+Bundle 'git://github.com/altercation/vim-colors-solarized'
 
 call vundle#end()
 "}}}
+
+filetype plugin indent on
 
 "Folding {{{
 set foldenable
@@ -78,6 +81,14 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 "}}}
 
+"Colorscheme {{{
+"syntax enable
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+colorscheme solarized
+"}}}
 filetype plugin indent on
 
 let g:airline#extensions#tabline#enabled = 1
@@ -108,4 +119,3 @@ match todomsg /@todo/
 source $VIM/abbreviations.vim
 source $VIM/mappings.vim
 
-au BufNewFile,BufRead *.hdev set filetype=hdev
