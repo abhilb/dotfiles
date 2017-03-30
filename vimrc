@@ -57,6 +57,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'git://github.com/altercation/vim-colors-solarized'
 Bundle 'mattn/emmet-vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'easymotion/vim-easymotion'
+Bundle 'tpope/vim-fireplace'
 
 call vundle#end()
 "}}}
