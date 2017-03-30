@@ -55,6 +55,8 @@ Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'sjl/gundo.vim'
 Bundle 'git://github.com/altercation/vim-colors-solarized'
+Bundle 'mattn/emmet-vim'
+Bundle 'airblade/vim-gitgutter'
 
 call vundle#end()
 "}}}
