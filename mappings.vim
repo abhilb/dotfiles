@@ -1,6 +1,7 @@
 
 "MyMappings {{{
-nnoremap <silent> <leader>ev :vsplit $MYVIMRC <CR>
+nnoremap <silent> <leader>ev :e $MYVIMRC <CR>
+nnoremap <silent> <leader>em :e $VIM/mappings.vim<CR>
 nnoremap <silent> <leader>so :source $MYVIMRC <CR>
 nnoremap <F5> :GundoToggle <CR>
 nmap <F8> :TagbarToggle <CR>
@@ -13,4 +14,8 @@ nnoremap <Up> <nop>
 nnoremap <Down> <nop>
 nnoremap xx zM
 nnoremap oo zR
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 "}}}
