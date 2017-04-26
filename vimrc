@@ -60,6 +60,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-fireplace'
 
+Bundle 'stackjs/vim-insert-cdn'
 call vundle#end()
 "}}}
 
@@ -109,6 +110,8 @@ au BufNewFile,BufRead *.py
     \set autoindent      |
     \set fileformat=unix |
 "}}}
+
+au BufNewFile,BufRead *.tpl imap <C-1> <Esc><C-y>,i
 
 command! -nargs=* Wrap set wrap linebreak nolist
 

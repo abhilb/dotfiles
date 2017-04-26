@@ -20,6 +20,6 @@ nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
 "mapping to replace the current word with yanked or deleted text
-nnoremap S "_diwP
+nnoremap S "diw"0P
 
 "}}}
