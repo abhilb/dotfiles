@@ -18,4 +18,8 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+"mapping to replace the current word with yanked or deleted text
+nnoremap S "_diwP
+
 "}}}
