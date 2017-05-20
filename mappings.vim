@@ -12,8 +12,6 @@ nnoremap <leader>1 :bprev <CR>
 nnoremap <leader>2 :bnext <CR>
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
-nnoremap xx zM
-nnoremap oo zR
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
