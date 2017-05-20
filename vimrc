@@ -32,35 +32,34 @@ filetype off
 "}}}
 
 "Vundle {{{
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
 
-Bundle 'ervandew/supertab'
-Bundle 'gmarik/Vundle.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'L9'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'chrisbra/Colorizer'
-"Bundle 'abhilb/puttum-kadalayum'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tmhedberg/SimpylFold'
+Plugin 'gmarik/vundle'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'L9'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'chrisbra/Colorizer'
+"Plugin 'abhilb/puttum-kadalayum'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tmhedberg/SimpylFold'
 
-Bundle 'tpope/vim-rails'
-Bundle 'abhilb/parunthu'
-Bundle 'https://github.com/kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'sjl/gundo.vim'
-Bundle 'git://github.com/altercation/vim-colors-solarized'
-Bundle 'mattn/emmet-vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'easymotion/vim-easymotion'
-Bundle 'tpope/vim-fireplace'
+Plugin 'tpope/vim-rails'
+Plugin 'abhilb/parunthu'
+Plugin 'https://github.com/kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'sjl/gundo.vim'
+Plugin 'git://github.com/altercation/vim-colors-solarized'
+Plugin 'mattn/emmet-vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-fireplace'
 
-Bundle 'stackjs/vim-insert-cdn'
 call vundle#end()
 "}}}
 
