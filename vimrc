@@ -1,127 +1,127 @@
+set nocompatible
 
-"General {{{
-set nocompatible "disable vi compatibility
-set autowrite    "writes on make/shell commands
-set clipboard+=unnamed "yanks go on clipboard
-"}}}
-
-"Searching {{{
-set hlsearch
-set incsearch
-
-nnoremap noh :nohlsearch<CR>
-"}}}
-
-"Formatting {{{
-set wildmenu
-
-" nicked from gmarik's vimrc
-set wildmode=longest,list "At command line complete longest common string, then list alternatives.
-
-
-set showcmd
-
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set number
-set cursorline
+filetype on
+filetype plugin on
+filetype indent on
 
 syntax on
-filetype off
-"}}}
 
-"Vundle {{{
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set number
+set linebreak
+set showbreak=+++
+set textwidth=100
+set showmatch
+set visualbell
 
-Plugin 'gmarik/vundle'
-Plugin 'ervandew/supertab'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'L9'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'chrisbra/Colorizer'
-"Plugin 'abhilb/puttum-kadalayum'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tmhedberg/SimpylFold'
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+set wrapscan "begin search from top of the file when nothing is found
 
-Plugin 'tpope/vim-rails'
-Plugin 'abhilb/parunthu'
-Plugin 'https://github.com/kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'sjl/gundo.vim'
-Plugin 'git://github.com/altercation/vim-colors-solarized'
-Plugin 'mattn/emmet-vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-fireplace'
+set autoindent
+set shiftwidth=4
+set smartindent
+set smarttab
+set softtabstop=4
 
-call vundle#end()
-"}}}
+set ruler
 
-filetype plugin indent on
+set undolevels=1000
+set backspace=indent,eol,start
+set history=1000
 
-"Folding {{{
-set foldenable
-set foldlevelstart=10
-set foldnestmax=10
-set foldmethod=marker
-set foldlevel=0
-set modelines=1
+set wildmenu
+set wildmode=list:longest
+
+" code folding
+set foldmethod=indent
+set foldlevel=99
+
+set nobackup
+set noswapfile
+
+set scrolloff=3 "keep three lines between the cursor and the edge of the screen
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'majutsushi/tagbar'
+Plug 'joshdick/onedark.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'kien/ctrlp.vim'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-commentary'
+Plug 'rosenfeld/conque-term'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'rhysd/vim-clang-format'
+Plug 'tpope/vim-fugitive'
+Plug 'derekwyatt/vim-fswitch'
+Plug 'vhdirk/vim-cmake'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'tpope/vim-unimpaired'
+Plug 'mattn/emmet-vim'
+Plug 'easymotion/vim-easymotion'
+
+call plug#end()
+
+inoremap jj <esc>
+
+let mapleader = ','
+
+nnoremap <leader>n :NERDTreeFocus<cr>
+nnoremap <C-n> :NERDTree<cr>
+nnoremap <C-t> :NERDTreeToggle<cr>
+nnoremap <C-f> :NERDTreeFind<cr>
 nnoremap <space> za
-"}}}
 
-"CtrlP settings {{{
-"search top to bottom
-let g:ctrlp_match_window='bottom,order=ttb'
-"open file in a new buffer
-let g:ctrlp_switch_buffer=0
-"change default mapping
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-"}}}
+set expandtab
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
-"Colorscheme {{{
-"syntax enable
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-let g:solarized_contrast="high"
-colorscheme solarized
-"}}}
-filetype plugin indent on
+colorscheme onedark
 
-let g:airline#extensions#tabline#enabled = 1
+" Rainbo braces
+let g:rainbow_active=1
 
-map <C-n> :NERDTreeToggle<CR>
-set laststatus=2
-
-"Python settings {{{
-au BufNewFile,BufRead *.py
-    \set tabstop=4       |
-    \set softtabstop=4   |
-    \set shiftwidth=4    |
-    \set expandtab       |
-    \set autoindent      |
-    \set fileformat=unix |
-"}}}
-
-au BufNewFile,BufRead *.tpl imap <C-1> <Esc><C-y>,i
-
-command! -nargs=* Wrap set wrap linebreak nolist
+" Tagbar settings
+let g:tagbar_autofocus=0
+let g:tagbar_width=42
+nmap <F8> :TagbarToggle<CR>
 
 
-let mapleader=","
+" Conque settings
+nmap <leader>python :ConqueTermSplit python<cr>
+nmap <leader>bash :ConqueTermSplit bash<cr>
 
-"Misc {{{
+" Clang format settings
+let g:clang_format#auto_format=1
+
+
+" you complete me settings
+nnoremap <F5>        :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>gic :YcmCompleter GoToInclude<CR>
+nnoremap <leader>gdc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gip :YcmCompleter GoToImprecise<CR>
+nnoremap <leader>f   :YcmCompleter FixIt<CR>
+
+nnoremap <leader>s :FSHere<CR>
+
+nnoremap <A-Left> <C-w>h<CR>
+nnoremap <A-Right> <C-w>l<CR>
+
+let g:rainbow_guifgs = ['DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['yellow', 'red', 'magenta']
+
 highlight todomsg ctermbg=red guibg=red ctermfg=yellow guifg=yellow term=bold
 match todomsg /@todo/
-"}}}
 
 source $VIM/abbreviations.vim
 source $VIM/mappings.vim
-
